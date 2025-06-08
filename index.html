@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus Antunes | Python Backend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0f172a',
+              secondary: '#1e293b',
+              accent: '#38bdf8',
+              light: '#f8fafc',
+              dark: '#020617'
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace']
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .section-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.5) 50%, transparent 100%);
+        }
+        .tech-tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+        }
+        .skill-tag {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-size: 0.875rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            border: 1px solid #1e293b;
+            display: flex;
+            align-items: center;
+        }
+        .social-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            background-color: #1e293b;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        .social-btn:hover {
+            background-color: #38bdf8;
+            color: #0f172a;
+        }
+        .book-card {
+            background-color: #0f172a;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            border: 1px solid #1e293b;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .book-cover {
+            width: 5rem; /* antes era 4rem */
+            height: 6rem; /* antes era 5rem */
+            object-fit: cover;
+            border-radius: 0.25rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-primary text-light font-sans min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-5xl">
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <div class="relative inline-block mb-6">
+                <div class="absolute -inset-2 bg-accent/20 rounded-full blur-md"></div>
+                <img src="midea/perfil.jpeg" alt="Matheus Antunes" class="relative w-32 h-32 rounded-full border-4 border-accent/50 object-cover z-10">
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">Matheus Antunes</h1>
+            <h2 class="text-2xl gradient-text font-semibold mb-2">Backend Developer @Shoppub</h2>
+            <div class="flex justify-center space-x-4 mt-6">
+                <a href="https://wa.me/74988035202" class="social-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/matheus-antunes-99b369361/" class="social-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+                <a href="https://github.com/Matheus1237" class="social-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content - Single Column Layout -->
+        <div class="space-y-8">
+            <!-- About Section -->
+            <section class="bg-secondary rounded-xl p-6 card-hover">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <i class="fas fa-user mr-3 text-accent"></i>
+                    <span class="gradient-text">Sobre Mim</span>
+                </h2>
+                <p class="opacity-90 mb-4">
+                    Desenvolvedor backend especializado em <span class="text-accent font-medium">Python</span> e <span class="text-accent font-medium">Django</span>, 
+                    com experiência em construir sistemas distribuídos e APIs de alta performance.
+                </p>
+                <p class="opacity-90">
+                    Na <span class="text-accent font-medium">Shoppub</span>, atuo desenvolvendo soluções robustas para o ecossistema de e-commerce, 
+                    focando em escalabilidade, resiliência e performance. Acredito em código limpo, 
+                    testes automatizados e documentação como pilares fundamentais para sistemas sustentáveis.
+                </p>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="bg-secondary rounded-xl p-6 card-hover">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <i class="fas fa-briefcase mr-3 text-accent"></i>
+                    <span class="gradient-text">Experiência Profissional</span>
+                </h2>
+                
+                <div class="space-y-6">
+                    <div class="border-l-2 border-accent pl-5 relative">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent"></div>
+                        <h3 class="text-xl font-semibold">Desenvolvedor Backend Python | Django</h3>
+                        <div class="flex flex-wrap items-center gap-2 mb-3">
+                            <span class="text-accent font-medium">Shoppub</span>
+                            <span class="text-sm opacity-75">2024 - Atualmente</span>
+                        </div>
+                        <ul class="space-y-2 list-disc pl-5 opacity-90">
+                            <li>Desenvolvimento e manutenção de APIs RESTful para plataforma de e-commerce com mais de <span class="text-accent font-medium">50 mil pedidos mensais</span>, garantindo escalabilidade e alta disponibilidade.</li>
+                            <li>Implementação de sistema de <span class="text-accent">autenticação JWT</span> com refresh tokens, controle de acesso granular e integração com Single Sign-On (SSO) para grandes lojistas.</li>
+                            <li>Integração com múltiplos métodos de pagamento, incluindo <span class="text-accent">Pix, cartão de crédito, boleto e carteiras digitais</span>, reduzindo em 20% o abandono de carrinho.</li>
+                            <li>Desenvolvimento de módulo de integração com transportadoras (Correios, Jadlog, Loggi), automatizando cálculo de frete e rastreamento de pedidos em tempo real.</li>
+                            <li>Otimização de queries e implementação de <span class="text-accent">cache distribuído com Redis</span>, aumentando a eficiência das buscas de produtos em 25%.</li>
+                            <li>Integração do sistema de logs com <span class="text-accent">AWS CloudWatch</span>, permitindo monitoramento centralizado e alertas automáticos para falhas críticas.</li>
+                            <li>Participação ativa em squads ágeis, atuando em code reviews, definição de arquitetura e implantação contínua (CI/CD) com Docker e GitHub Actions.</li>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">DRF</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">AWS CloudWatch</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="bg-secondary rounded-xl p-6 card-hover">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <i class="fas fa-code-branch mr-3 text-accent"></i>
+                    <span class="gradient-text">Projetos</span>
+                </h2>
+                
+                <div class="space-y-8">
+                    <!-- Project 1 -->
+                    <div class="space-y-4">
+                        <div class="rounded-lg overflow-hidden">
+                            <img src="midea/flashlearn.png" alt="FlashLearn" class="w-full h-auto object-cover">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-semibold">FlashLearn</h3>
+                                <div class="flex space-x-3">
+                                    <a href="https://github.com/Matheus1237/flashlearn" class="text-light opacity-70 hover:opacity-100 hover:text-accent transition" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://flashlearn-x0jz.onrender.com" class="text-light opacity-70 hover:opacity-100 hover:text-accent transition" target="_blank" rel="noopener noreferrer">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-sm opacity-80 mb-1"><strong>Papel:</strong> Desenvolvedor Backend (Fullstack)</p>
+                            <p class="text-sm opacity-80 mb-1"><strong>Resultados:</strong> Plataforma com +200 usuários ativos, integração de pagamentos, dashboard interativa e redução de bugs em produção.</p>
+                            <p class="opacity-90 mb-4">
+                                Plataforma de aprendizagem moderna, focada em memorização eficiente e experiência do usuário:
+                            </p>
+                            <ul class="list-disc list-inside mb-4 text-sm opacity-90">
+                                <li>Criação e gerenciamento de decks personalizados de flashcards</li>
+                                <li>Estudo com feedback detalhado de desempenho (sessão e histórico global)</li>
+                                <li>Dashboard interativa com gráficos de evolução e estatísticas em tempo real</li>
+                                <li>Gestão de perfil, assinatura e pagamentos integrados via <span class="text-accent">Stripe API</span></li>
+                                <li>Modo escuro responsivo para melhor usabilidade</li>
+                                <li>Arquitetura backend escalável com <span class="text-accent">Django REST Framework</span> e autenticação JWT</li>
+                                <li>Testes automatizados (unitários e integração) garantindo alta cobertura e confiabilidade</li>
+                                <li>Deploy contínuo com <span class="text-accent">Docker</span> e integração CI/CD via GitHub Actions</li>
+                                <li>Banco de dados <span class="text-accent">PostgreSQL</span> otimizado para consultas rápidas</li>
+                                <li>Documentação técnica clara e exemplos de uso para onboarding rápido de novos desenvolvedores</li>
+                            </ul>
+                            <p class="opacity-90 mb-4">
+                                Projeto 100% open source, com foco em escalabilidade, segurança e experiência do usuário — ideal para ambientes educacionais, bootcamps e uso individual.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-xs">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">TailwindCSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Stripe API</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Novo Projeto: InfoHub API -->
+                <div class="space-y-8">
+                    <!-- Project 1 -->
+                    <div class="space-y-4">
+                        <div class="rounded-lg overflow-hidden">
+                            <img src="midea/infohuapi.jpeg" alt="FlashLearn" class="w-full h-auto object-cover">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-semibold">InfoHub API</h3>
+                                <div class="flex space-x-3">
+                                    <a href="https://github.com/Matheus1237/infohub-api" class="text-light opacity-70 hover:opacity-100 hover:text-accent transition" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-sm opacity-80 mb-1"><strong>Papel:</strong> Desenvolvedor Backend</p>
+                            <p class="text-sm opacity-80 mb-1"><strong>Resultados:</strong> API pública open source, focada em praticidade para desenvolvedores brasileiros, com endpoints úteis e documentação clara.</p>
+                            <p class="opacity-90 mb-4">
+                                InfoHub API — Centralize informações públicas do Brasil com FastAPI!<br>
+                                Uma API pública que reúne dados práticos do dia a dia em um só lugar:
+                            </p>
+                            <ul class="list-disc list-inside mb-4 text-sm opacity-90">
+                                <li>Endereço via CEP</li>
+                                <li>Clima atual por cidade</li>
+                                <li>Cotações de moedas (USD, EUR etc.)</li>
+                                <li>Feriados nacionais por ano</li>
+                            </ul>
+                            <p class="opacity-90 mb-4">
+                                Interface RESTful simples, rápida e bem documentada — ideal para integrar em projetos web, bots, apps ou estudos.
+                            </p>
+                            <p class="opacity-90 mb-2 font-semibold">Exemplos de uso:</p>
+                            <ul class="list-none ml-2 mb-4 text-sm opacity-90">
+                                <li><code>/cep/01001000</code> → Praça da Sé, São Paulo - SP</li>
+                                <li><code>/clima?cidade=Recife</code> → 28.6°C, nuvens dispersas</li>
+                                <li><code>/cambio</code> → Cotações de dólar e euro</li>
+                                <li><code>/feriados?ano=2025</code> → Lista de feriados nacionais</li>
+                            </ul>
+                            <p class="opacity-90">
+                                100% open source. Simples, útil e direto ao ponto.
+                            </p><br>
+                            <div class="flex flex-wrap gap-2 text-xs">
+                                <span class="tech-tag">Python 3.11</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">HTTPx</span>
+                                <span class="tech-tag">Uvicorn</span>
+                                <span class="tech-tag">Pydantic</span>
+                                <span class="tech-tag">Dotenv</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="bg-secondary rounded-xl p-6 card-hover">
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-cogs mr-3 text-accent"></i>
+                    <span class="gradient-text">Habilidades Técnicas</span>
+                </h2>
+                <div class="space-y-8">
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fab fa-python text-2xl"></i> Python
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-database text-2xl"></i> SQL
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fab fa-js text-2xl"></i> JavaScript
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fab fa-html5 text-2xl"></i> HTML5
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fab fa-css3-alt text-2xl"></i> CSS3
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fab fa-git-alt text-2xl"></i> Git
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-cube text-2xl"></i> Django
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-server text-2xl"></i> Django REST Framework
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-bolt text-2xl"></i> FastAPI
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-flask text-2xl"></i> Flask
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-vial text-2xl"></i> Pytest
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-database text-2xl"></i> PostgreSQL
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-database text-2xl"></i> MySQL
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-memory text-2xl"></i> Redis
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-archive text-2xl"></i> MongoDB
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-database text-2xl"></i> SQLite
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fab fa-docker text-2xl"></i> Docker
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fab fa-aws text-2xl"></i> AWS
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-sync-alt text-2xl"></i> CI/CD
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fab fa-github text-2xl"></i> GitHub Actions
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-robot text-2xl"></i> Inteligência Artificial
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-brain text-2xl"></i> LLMs (Large Language Models)
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-code-branch text-2xl"></i> Pair Programming
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-lightbulb text-2xl"></i> Copilot / Ferramentas de IA para Devs
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-network-wired text-2xl"></i> APIs de IA (OpenAI, Hugging Face)
+                        </span>
+                        <span class="skill-tag text-lg flex items-center gap-2">
+                            <i class="fas fa-language text-2xl"></i> Inglês (Intermediário)
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3 text-accent">Outros</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="skill-tag text-lg flex items-center gap-2">
+                                <i class="fab fa-linux text-2xl"></i> Linux
+                            </span>
+                            <span class="skill-tag text-lg flex items-center gap-2">
+                                <i class="fas fa-terminal text-2xl"></i> Shell Script
+                            </span>
+                            <span class="skill-tag text-lg flex items-center gap-2">
+                                <i class="fab fa-trello text-2xl"></i> Trello
+                            </span>
+                            <span class="skill-tag text-lg flex items-center gap-2">
+                                <i class="fab fa-slack text-2xl"></i> Slack
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Education Section -->
+            <section class="bg-secondary rounded-xl p-6 card-hover">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <i class="fas fa-graduation-cap mr-3 text-accent"></i>
+                    <span class="gradient-text">Formação</span>
+                </h2>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-semibold">Análise e Desenvolvimento de Sistemas</h3>
+                        <p class="text-sm opacity-75">Estácio - 2024 (Cursando)</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Books Section -->
+            <section class="bg-secondary rounded-xl p-6 card-hover">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <i class="fas fa-book mr-3 text-accent"></i>
+                    <span class="gradient-text">Livros Favoritos</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="book-card">
+                        <img src="midea/clearcode.jpg" alt="Clean Code" class="book-cover">
+                        <div>
+                            <h3 class="font-medium">Código Limpo</h3>
+                            <p class="text-sm opacity-75">Robert C. Martin</p>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <img src="midea/pythonfluente.png" alt="Python Fluente" class="book-cover">
+                        <div>
+                            <h3 class="font-medium">Python Fluente</h3>
+                            <p class="text-sm opacity-75">Luciano Ramalho</p>
+                        </div>
+                    </div>
+                    
+                    <div class="book-card">
+                        <img src="midea/designpatterns.jpg" alt="Design Patterns" class="book-cover">
+                        <div>
+                            <h3 class="font-medium">Design Patterns</h3>
+                            <p class="text-sm opacity-75">GoF</p>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <img src="midea/entendendoalgoritimos.jpg" alt="Design Patterns" class="book-cover">
+                        <div>
+                            <h3 class="font-medium">Entendendo Algoritmos</h3>
+                            <p class="text-sm opacity-75">Aditya Y. Bhargava</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Contact CTA -->
+            <section class="bg-gradient-to-br from-accent/10 to-accent/5 rounded-xl p-6 border border-accent/20 card-hover">
+                <h2 class="text-xl font-semibold mb-3">Vamos trabalhar juntos?</h2>
+                <p class="text-sm opacity-90 mb-4">Estou aberto a novas oportunidades e colaborações.</p>
+                <a href="https://wa.me/74988035202" class="inline-block w-full text-center bg-accent text-primary font-medium py-2 px-4 rounded-lg hover:bg-accent/90 transition" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-paper-plane mr-2"></i> Envie uma mensagem
+                </a>
+            </section>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="mt-16 text-center text-sm opacity-70">
+            <p>© 2025 Matheus Antunes. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

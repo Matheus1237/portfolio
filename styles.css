@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+}
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4f8cff;
+    margin-bottom: 16px;
+}
+h1 {
+    margin: 0 0 8px 0;
+    font-size: 2.2rem;
+}
+h2 {
+    margin: 0 0 16px 0;
+    font-size: 1.2rem;
+    color: #4f8cff;
+    font-weight: 500;
+}
+.contacts p, .contacts a {
+    margin: 0;
+    font-size: 1rem;
+    color: #444;
+}
+.contacts a {
+    color: #4f8cff;
+    text-decoration: none;
+}
+section {
+    margin-bottom: 28px;
+}
+section h3 {
+    color: #4f8cff;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+ul {
+    padding-left: 18px;
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+.skills-list li {
+    background: #eaf1fb;
+    color: #2563eb;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 0.98rem;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 12px 4px;
+    }
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+    }
+} 
