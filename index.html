@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Antunes | Python Backend Developer</title>
+    <title>Matheus Antunes | Full Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -34,13 +34,8 @@
             background-clip: text;
             color: transparent;
         }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
+        .card-hover { transition: all 0.25s ease; }
+        .card-hover:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
         .section-divider {
             border: none;
             height: 1px;
@@ -87,13 +82,7 @@
             align-items: flex-start;
             gap: 1rem;
         }
-        .book-cover {
-            width: 5rem; /* antes era 4rem */
-            height: 6rem; /* antes era 5rem */
-            object-fit: cover;
-            border-radius: 0.25rem;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
+        .book-cover { width: 5.5rem; height: 7rem; object-fit: cover; border-radius: 0.25rem; border: 1px solid rgba(56,189,248,0.2); }
     </style>
 </head>
 <body class="bg-primary text-light font-sans min-h-screen">
@@ -104,9 +93,13 @@
                 <div class="absolute -inset-2 bg-accent/20 rounded-full blur-md"></div>
                 <img src="midea/perfil.jpeg" alt="Matheus Antunes" class="relative w-32 h-32 rounded-full border-4 border-accent/50 object-cover z-10">
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-2">Matheus Antunes</h1>
-            <h2 class="text-2xl gradient-text font-semibold mb-2">Backend Developer @Shoppub</h2>
+            <h1 class="text-5xl md:text-6xl font-bold mb-3">Matheus Antunes</h1>
+            <h2 class="text-3xl gradient-text font-semibold mb-3">Full Stack Developer | Python | Django | FastAPI | React | HTML | CSS | JavaScript</h2>
+            <p class="opacity-80 text-base">Casa Nova, Bahia, Brasil</p>
             <div class="flex justify-center space-x-4 mt-6">
+                <a href="mailto:" class="social-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
                 <a href="https://wa.me/74988035202" class="social-btn" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp text-2xl"></i>
                 </a>
@@ -121,20 +114,14 @@
 
         <!-- Main Content - Single Column Layout -->
         <div class="space-y-8">
-            <!-- About Section -->
+            <!-- Professional Summary Section -->
             <section class="bg-secondary rounded-xl p-6 card-hover">
                 <h2 class="text-2xl font-bold mb-4 flex items-center">
                     <i class="fas fa-user mr-3 text-accent"></i>
-                    <span class="gradient-text">Sobre Mim</span>
+                    <span class="gradient-text">Resumo Profissional</span>
                 </h2>
-                <p class="opacity-90 mb-4">
-                    Desenvolvedor backend especializado em <span class="text-accent font-medium">Python</span> e <span class="text-accent font-medium">Django</span>, 
-                    com experiência em construir sistemas distribuídos e APIs de alta performance.
-                </p>
                 <p class="opacity-90">
-                    Na <span class="text-accent font-medium">Shoppub</span>, atuo desenvolvendo soluções robustas para o ecossistema de e-commerce, 
-                    focando em escalabilidade, resiliência e performance. Acredito em código limpo, 
-                    testes automatizados e documentação como pilares fundamentais para sistemas sustentáveis.
+                    Full Stack Developer com experiência na construção de APIs RESTful escaláveis, sistemas distribuídos e aplicações orientadas a serviços utilizando Python, Django e PostgreSQL. Domínio em bancos relacionais, caching com Redis, e infraestrutura em nuvem (Docker, AWS). Forte atuação com CI/CD, testes automatizados e foco em performance, segurança e boas práticas de arquitetura limpa. Valoriza código sustentável, documentação clara e colaboração em times ágeis.
                 </p>
             </section>
 
@@ -149,30 +136,21 @@
                     <!-- Experiência Shoppub -->
                     <div class="border-l-2 border-accent pl-5 relative">
                         <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent"></div>
-                        <h3 class="text-xl font-semibold">Desenvolvedor Backend Python | Django</h3>
+                        <h3 class="text-xl font-semibold">Shoppub — Full Stack Developer</h3>
                         <div class="flex flex-wrap items-center gap-2 mb-3">
-                            <span class="text-accent font-medium">Shoppub</span>
-                            <span class="text-sm opacity-75">2022 - Atualmente</span>
+                            <span class="text-sm opacity-75">Remoto · Maio 2024 – Agosto 2025 (Contrato PJ)</span>
                         </div>
+                        <p class="text-sm opacity-80 mb-2"><strong>Stack:</strong> Python, Django, APIs RESTful, Django Rest API, HTML, CSS, JavaScript, BootStrap, React, Django Admin, Django Rest Framework, PostgreSQL, Redis, AWS, Docker, GitHub Actions, Testes Unitários, Pytest, Comunicação em equipe</p>
                         <ul class="space-y-2 list-disc pl-5 opacity-90">
-                            <li>Desenvolvimento e manutenção de APIs RESTful para plataforma de e-commerce com mais de <span class="text-accent font-medium">50 mil pedidos mensais</span>, garantindo escalabilidade e alta disponibilidade.</li>
-                            <li>Implementação de sistema de <span class="text-accent">autenticação JWT</span> com refresh tokens, controle de acesso granular e integração com Single Sign-On (SSO) para grandes lojistas.</li>
-                            <li>Integração com múltiplos métodos de pagamento, incluindo <span class="text-accent">Pix, cartão de crédito, boleto e carteiras digitais</span>, reduzindo em 20% o abandono de carrinho.</li>
-                            <li>Desenvolvimento de módulo de integração com transportadoras (Correios, Jadlog, Loggi), automatizando cálculo de frete e rastreamento de pedidos em tempo real.</li>
-                            <li>Otimização de queries e implementação de <span class="text-accent">cache distribuído com Redis</span>, aumentando a eficiência das buscas de produtos em 25%.</li>
-                            <li>Integração do sistema de logs com <span class="text-accent">AWS CloudWatch</span>, permitindo monitoramento centralizado e alertas automáticos para falhas críticas.</li>
-                            <li>Participação ativa em squads ágeis, atuando em code reviews, definição de arquitetura e implantação contínua (CI/CD) com Docker e GitHub Actions.</li>
+                            <li>Desenvolvimento e manutenção de APIs RESTful em Django Rest Framework, incluindo integrações com métodos de pagamento e sistemas de terceiros (Bling, Tiny, transportadoras).</li>
+                            <li>Customização e otimização do Django Admin para clientes, permitindo melhor gestão de pedidos, produtos e relatórios.</li>
+                            <li>Criação e ajuste de funcionalidades em front-end de lojas virtuais (HTML, CSS, JavaScript, Bootstrap e React).</li>
+                            <li>Implementação de processos de importação e manipulação de dados via Jupyter (clientes, produtos, pedidos) utilizando PostgreSQL como base de dados.</li>
+                            <li>Configuração e monitoramento de logs e métricas no AWS CloudWatch, garantindo estabilidade e rastreabilidade do sistema.</li>
+                            <li>Colaboração em integrações entre sistemas internos e externos, com foco em ERP e CRM (Bling, Tiny).</li>
+                            <li>Escrita de testes unitários com Pytest para garantir qualidade e estabilidade do código.</li>
+                            <li>Participação em reuniões de equipe, alinhando requisitos técnicos e de negócio para evolução da plataforma.</li>
                         </ul>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">DRF</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">AWS CloudWatch</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">CI/CD</span>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -191,223 +169,177 @@
                             <img src="midea/flashlearn.png" alt="FlashLearn" class="w-full h-auto object-cover">
                         </div>
                         <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <h3 class="text-xl font-semibold">FlashLearn</h3>
-                                <div class="flex space-x-3">
-                                    <a href="https://github.com/Matheus1237/flashlearn" class="text-light opacity-70 hover:opacity-100 hover:text-accent transition" target="_blank" rel="noopener noreferrer">
-                                        <i class="fab fa-github"></i>
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3">
+                                <h3 class="text-2xl font-semibold">FlashLearn</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="https://github.com/Matheus1237/flashlearn" class="inline-flex items-center gap-2 bg-accent text-primary font-medium py-2 px-4 rounded-lg hover:bg-accent/90 transition" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i> Repositório
                                     </a>
-                                    <a href="https://flashlearn-x0jz.onrender.com" class="text-light opacity-70 hover:opacity-100 hover:text-accent transition" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-external-link-alt"></i>
+                                    <a href="https://flashlearn-x0jz.onrender.com" class="inline-flex items-center gap-2 bg-accent text-primary font-medium py-2 px-4 rounded-lg hover:bg-accent/90 transition" target="_blank" rel="noopener noreferrer">
+                                        <i class="fas fa-external-link-alt"></i> Ver Demo
                                     </a>
                                 </div>
                             </div>
-                            <p class="text-sm opacity-80 mb-1"><strong>Papel:</strong> Desenvolvedor Backend (Fullstack)</p>
-                            <p class="opacity-90 mb-4">
-                                Plataforma de aprendizagem moderna, focada em memorização eficiente e experiência do usuário:
-                            </p>
+                            <p class="text-sm opacity-80 mb-1">Junho 2023 - Dezembro 2023</p>
+                            <p class="text-sm opacity-80 mb-1"><strong>Stack:</strong> Python, React.js, Django REST, PostgreSQL, Docker, Stripe, Pytest, HTML, CSS, JavaScript</p>
                             <ul class="list-disc list-inside mb-4 text-sm opacity-90">
-                                <li>Criação e gerenciamento de decks personalizados de flashcards</li>
-                                <li>Estudo com feedback detalhado de desempenho (sessão e histórico global)</li>
-                                <li>Dashboard interativa com gráficos de evolução e estatísticas em tempo real</li>
-                                <li>Gestão de perfil, assinatura e pagamentos integrados via <span class="text-accent">Stripe API</span></li>
-                                <li>Modo escuro responsivo para melhor usabilidade</li>
-                                <li>Arquitetura backend escalável com <span class="text-accent">Django REST Framework</span> e autenticação JWT</li>
-                                <li>Testes automatizados (unitários e integração) garantindo alta cobertura e confiabilidade</li>
-                                <li>Deploy contínuo com <span class="text-accent">Docker</span> e integração CI/CD via GitHub Actions</li>
-                                <li>Banco de dados <span class="text-accent">PostgreSQL</span> otimizado para consultas rápidas</li>
-                                <li>Documentação técnica clara e exemplos de uso para onboarding rápido de novos desenvolvedores</li>
+                                <li>Backend robusto com autenticação JWT, CRUD completo e dashboards.</li>
+                                <li>Integração com Stripe para assinatura de planos premium.</li>
+                                <li>Testes automatizados com Pytest e cobertura de endpoints críticos.</li>
+                                <li>Foco em escalabilidade, modularidade e arquitetura limpa.</li>
                             </ul>
-                            <p class="opacity-90 mb-4">
-                                Projeto 100% open source, com foco em escalabilidade, segurança e experiência do usuário — ideal para ambientes educacionais, bootcamps e uso individual.
-                            </p>
-                            <div class="flex flex-wrap gap-2 text-xs">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Django</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                                <span class="tech-tag">TailwindCSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Stripe API</span>
-                            </div>
                         </div>
                     </div>
                     
-                    <!-- Novo Projeto: InfoHub API -->
-                <div class="space-y-8">
-                    <!-- Project 1 -->
+                    <!-- InfoHub API -->
                     <div class="space-y-4">
                         <div class="rounded-lg overflow-hidden">
-                            <img src="midea/infohuapi.jpeg" alt="FlashLearn" class="w-full h-auto object-cover">
+                            <img src="midea/infohuapi.jpeg" alt="InfoHub API" class="w-full h-auto object-cover">
                         </div>
                         <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <h3 class="text-xl font-semibold">InfoHub API</h3>
-                                <div class="flex space-x-3">
-                                    <a href="https://github.com/Matheus1237/infohub-api" class="text-light opacity-70 hover:opacity-100 hover:text-accent transition" target="_blank" rel="noopener noreferrer">
-                                        <i class="fab fa-github"></i>
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3">
+                                <h3 class="text-2xl font-semibold">InfoHub API</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="https://github.com/Matheus1237/infohub-api" class="inline-flex items-center gap-2 bg-accent text-primary font-medium py-2 px-4 rounded-lg hover:bg-accent/90 transition" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i> Repositório
                                     </a>
                                 </div>
                             </div>
-                            <p class="text-sm opacity-80 mb-1"><strong>Papel:</strong> Desenvolvedor Backend</p>
-                            <p class="text-sm opacity-80 mb-1"><strong>Resultados:</strong> API pública open source, focada em praticidade para desenvolvedores brasileiros, com endpoints úteis e documentação clara.</p>
-                            <p class="opacity-90 mb-4">
-                                InfoHub API — Centralize informações públicas do Brasil com FastAPI!<br>
-                                Uma API pública que reúne dados práticos do dia a dia em um só lugar:
-                            </p>
+                            <p class="text-sm opacity-80 mb-1">Janeiro 2024 - Junho 2024</p>
+                            <p class="text-sm opacity-80 mb-1"><strong>Stack:</strong> Python, React.js, FastAPI, HTML, CSS, JavaScript, PostgreSQL, Docker, Requests</p>
                             <ul class="list-disc list-inside mb-4 text-sm opacity-90">
-                                <li>Endereço via CEP</li>
-                                <li>Clima atual por cidade</li>
-                                <li>Cotações de moedas (USD, EUR etc.)</li>
-                                <li>Feriados nacionais por ano</li>
+                                <li>API RESTful com dados de clima, CEP, câmbio e feriados nacionais.</li>
+                                <li>Documentação com OpenAPI, tratamento robusto de erros e versionamento.</li>
+                                <li>Aplicação conteinerizada, pronta para deploy em ambientes como AWS ou Heroku.</li>
                             </ul>
-                            <p class="opacity-90 mb-4">
-                                Interface RESTful simples, rápida e bem documentada — ideal para integrar em projetos web, bots, apps ou estudos.
-                            </p>
-                            <p class="opacity-90 mb-2 font-semibold">Exemplos de uso:</p>
-                            <ul class="list-none ml-2 mb-4 text-sm opacity-90">
-                                <li><code>/cep/01001000</code> → Praça da Sé, São Paulo - SP</li>
-                                <li><code>/clima?cidade=Recife</code> → 28.6°C, nuvens dispersas</li>
-                                <li><code>/cambio</code> → Cotações de dólar e euro</li>
-                                <li><code>/feriados?ano=2025</code> → Lista de feriados nacionais</li>
-                            </ul>
-                            <p class="opacity-90">
-                                100% open source. Simples, útil e direto ao ponto.
-                            </p><br>
-                            <div class="flex flex-wrap gap-2 text-xs">
-                                <span class="tech-tag">Python 3.11</span>
-                                <span class="tech-tag">FastAPI</span>
-                                <span class="tech-tag">HTTPx</span>
-                                <span class="tech-tag">Uvicorn</span>
-                                <span class="tech-tag">Pydantic</span>
-                                <span class="tech-tag">Dotenv</span>
-                            </div>
                         </div>
                     </div>
-                </div>
             </section>
 
-            <!-- Skills Section -->
+            <!-- Technologies & Tools Section (Categorized) -->
             <section class="bg-secondary rounded-xl p-6 card-hover">
                 <h2 class="text-2xl font-bold mb-6 flex items-center">
                     <i class="fas fa-cogs mr-3 text-accent"></i>
-                    <span class="gradient-text">Habilidades Técnicas</span>
+                    <span class="gradient-text">Tecnologias e Ferramentas</span>
                 </h2>
-                <div class="space-y-8">
-                    <!-- Python & Backend -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <h3 class="font-semibold mb-3 text-accent">Python & Backend</h3>
-                        <div class="flex flex-wrap gap-4">
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fab fa-python text-2xl"></i> Python
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-cube text-2xl"></i> Django
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-server text-2xl"></i> Django REST Framework
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-bolt text-2xl"></i> FastAPI
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-flask text-2xl"></i> Flask
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-vial text-2xl"></i> Pytest
-                            </span>
+                        <h3 class="font-semibold mb-3 text-accent">1. Fundamentos de Programação</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">POO</span>
+                            <span class="skill-tag">Estruturas de Dados</span>
+                            <span class="skill-tag">Algoritmos</span>
+                            <span class="skill-tag">Testes Automatizados</span>
+                            <span class="skill-tag">Pytest</span>
+                            <span class="skill-tag">Unittest</span>
+                            <span class="skill-tag">Git</span>
                         </div>
                     </div>
-                    <!-- Bancos de Dados & Infraestrutura -->
                     <div>
-                        <h3 class="font-semibold mb-3 text-accent">Bancos de Dados & Infraestrutura</h3>
-                        <div class="flex flex-wrap gap-4">
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-database text-2xl"></i> PostgreSQL
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-database text-2xl"></i> SQLite
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-database text-2xl"></i> MySQL
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-memory text-2xl"></i> Redis
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-archive text-2xl"></i> MongoDB
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fab fa-docker text-2xl"></i> Docker
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fab fa-aws text-2xl"></i> AWS
-                            </span>
+                        <h3 class="font-semibold mb-3 text-accent">2. Backend com Python</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Pyramid</span>
+                            <span class="skill-tag">Django Rest Framework</span>
+                            <span class="skill-tag">Integração de APIs</span>
+                            <span class="skill-tag">REST</span>
+                            <span class="skill-tag">GraphQL</span>
+                            <span class="skill-tag">Celery</span>
                         </div>
                     </div>
-                    <!-- Frontend & Dev Tools -->
                     <div>
-                        <h3 class="font-semibold mb-3 text-accent">Frontend & Ferramentas</h3>
-                        <div class="flex flex-wrap gap-4">
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fab fa-js text-2xl"></i> JavaScript
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fab fa-html5 text-2xl"></i> HTML5
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fab fa-css3-alt text-2xl"></i> CSS3
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fab fa-git-alt text-2xl"></i> Git
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fab fa-github text-2xl"></i> GitHub Actions
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-sync-alt text-2xl"></i> CI/CD
-                            </span>
+                        <h3 class="font-semibold mb-3 text-accent">3. Banco de Dados</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">SQL (avançado)</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">SQLAlchemy</span>
                         </div>
                     </div>
-                    <!-- Inteligência Artificial & APIs -->
                     <div>
-                        <h3 class="font-semibold mb-3 text-accent">Inteligência Artificial & APIs</h3>
-                        <div class="flex flex-wrap gap-4">
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-robot text-2xl"></i> Inteligência Artificial
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-brain text-2xl"></i> LLMs (Large Language Models)
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-lightbulb text-2xl"></i> Copilot / Ferramentas de IA para Devs
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-network-wired text-2xl"></i> APIs de IA (OpenAI, Hugging Face)
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-code-branch text-2xl"></i> Pair Programming
-                            </span>
+                        <h3 class="font-semibold mb-3 text-accent">4. Frontend</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Consumo de APIs</span>
                         </div>
                     </div>
-                    <!-- Outros -->
                     <div>
-                        <h3 class="font-semibold mb-3 text-accent">Outros</h3>
-                        <div class="flex flex-wrap gap-4">
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fab fa-linux text-2xl"></i> Linux
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-terminal text-2xl"></i> Shell Script
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fab fa-trello text-2xl"></i> Trello
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fab fa-slack text-2xl"></i> Slack
-                            </span>
-                            <span class="skill-tag text-lg flex items-center gap-2">
-                                <i class="fas fa-language text-2xl"></i> Inglês (Intermediário)
-                            </span>
+                        <h3 class="font-semibold mb-3 text-accent">5. Dados & Ciência de Dados</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">Seaborn</span>
+                            <span class="skill-tag">Plotly</span>
+                            <span class="skill-tag">Excel/CSV/JSON</span>
+                            <span class="skill-tag">OpenPyXL</span>
+                            <span class="skill-tag">Pandas ExcelWriter</span>
+                            <span class="skill-tag">Web Scraping</span>
+                            <span class="skill-tag">BeautifulSoup</span>
+                            <span class="skill-tag">Scrapy</span>
+                            <span class="skill-tag">PySpark</span>
+                            <span class="skill-tag">Airflow</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3 text-accent">6. Machine Learning & IA</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">Statsmodels</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">spaCy</span>
+                            <span class="skill-tag">NLTK</span>
+                            <span class="skill-tag">Transformers</span>
+                            <span class="skill-tag">Deploy de modelos</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Streamlit</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3 text-accent">7. Cloud & DevOps</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">GitHub Actions</span>
+                            <span class="skill-tag">GitLab CI</span>
+                            <span class="skill-tag">Jenkins</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">S3</span>
+                            <span class="skill-tag">Lambda</span>
+                            <span class="skill-tag">EC2</span>
+                            <span class="skill-tag">RDS</span>
+                            <span class="skill-tag">Azure</span>
+                            <span class="skill-tag">GCP</span>
+                            <span class="skill-tag">BigQuery</span>
+                            <span class="skill-tag">Cloud Functions</span>
+                            <span class="skill-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3 text-accent">8. BI / Visualização</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Apache Superset</span>
+                            <span class="skill-tag">Metabase</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3 text-accent">9. Arquitetura & Boas Práticas</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">Design Patterns</span>
+                            <span class="skill-tag">SOLID</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">TDD</span>
+                            <span class="skill-tag">Clean Architecture</span>
                         </div>
                     </div>
                 </div>
@@ -417,13 +349,13 @@
             <section class="bg-secondary rounded-xl p-6 card-hover">
                 <h2 class="text-2xl font-bold mb-4 flex items-center">
                     <i class="fas fa-graduation-cap mr-3 text-accent"></i>
-                    <span class="gradient-text">Formação</span>
+                    <span class="gradient-text">Formação Acadêmica</span>
                 </h2>
                 
                 <div class="space-y-4">
                     <div>
-                        <h3 class="font-semibold">Análise e Desenvolvimento de Sistemas</h3>
-                        <p class="text-sm opacity-75">Estácio - 2024 (Cursando)</p>
+                        <h3 class="font-semibold">Estácio de Sá — Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+                        <p class="text-sm opacity-75">2024 – Em andamento</p>
                     </div>
                 </div>
             </section>
@@ -459,9 +391,9 @@
                             <p class="text-sm opacity-75">GoF</p>
                         </div>
                     </div>
-
+                
                     <div class="book-card">
-                        <img src="midea/entendendoalgoritimos.jpg" alt="Design Patterns" class="book-cover">
+                        <img src="midea/entendendoalgoritimos.jpg" alt="Entendendo Algoritmos" class="book-cover">
                         <div>
                             <h3 class="font-medium">Entendendo Algoritmos</h3>
                             <p class="text-sm opacity-75">Aditya Y. Bhargava</p>
@@ -471,12 +403,17 @@
             </section>
             
             <!-- Contact CTA -->
-            <section class="bg-gradient-to-br from-accent/10 to-accent/5 rounded-xl p-6 border border-accent/20 card-hover">
-                <h2 class="text-xl font-semibold mb-3">Vamos trabalhar juntos?</h2>
-                <p class="text-sm opacity-90 mb-4">Estou aberto a novas oportunidades e colaborações.</p>
-                <a href="https://wa.me/74988035202" class="inline-block w-full text-center bg-accent text-primary font-medium py-2 px-4 rounded-lg hover:bg-accent/90 transition" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-paper-plane mr-2"></i> Envie uma mensagem
-                </a>
+            <section class="bg-gradient-to-br from-accent/10 to-accent/5 rounded-xl p-8 border border-accent/20 card-hover">
+                <h2 class="text-2xl font-semibold mb-3">Vamos trabalhar juntos?</h2>
+                <p class="text-base opacity-90 mb-5">Estou aberto a novas oportunidades e colaborações.</p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="https://wa.me/74988035202" class="inline-flex items-center justify-center flex-1 bg-accent text-primary font-medium py-3 px-4 rounded-lg hover:bg-accent/90 transition" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-paper-plane mr-2"></i> WhatsApp
+                    </a>
+                    <a href="mailto:" class="inline-flex items-center justify-center flex-1 bg-secondary text-light border border-accent/30 font-medium py-3 px-4 rounded-lg hover:bg-secondary/80 transition" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-envelope mr-2"></i> Email
+                    </a>
+                </div>
             </section>
         </div>
         
